@@ -1,3 +1,1 @@
-web: npm install
-web: --prefix client && npm run build
-web: node server.js
+web: NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client
