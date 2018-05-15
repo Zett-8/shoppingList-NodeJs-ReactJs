@@ -30,6 +30,7 @@ app.post('/post', (req,res,next) => {
   async.each(items, (eachItem, next) => {
     const item = new Item()
     item.itemname = eachItem
+    item.identical = Math.random()
     item.save(err => {
       if(err) throw err
     })
