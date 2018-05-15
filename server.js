@@ -16,7 +16,8 @@ const Item = require('./models/item')
 
 app.get('/', (req, res) => {
   if(process.env.NODE_ENV==='production'){
-    res.sendFile(path.resolve(__dirname, './client/build/index.html'))
+    res.send('hello world')
+    // res.sendFile(path.resolve(__dirname, './client/build/index.html'))
   } else {
     res.sendFile(path.resolve(__dirname, './client/public/index.html'))
   }
