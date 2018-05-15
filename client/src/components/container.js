@@ -40,9 +40,6 @@ class Container extends React.Component {
 
 
   async itemDelete(itemId){
-    const res = await axios.post('/item-del', {id: itemId}).then()
-    console.log(res)
-
     const items = this.state.items.slice()
     items.filter((v, i, arr) => {
       if(v['_id'] === itemId) {
@@ -51,6 +48,9 @@ class Container extends React.Component {
       return null
     },{})
     this.setState({items})
+
+    const res = await axios.post('/item-del', {id: itemId}).then()
+    console.log(res)
   }
 
 
