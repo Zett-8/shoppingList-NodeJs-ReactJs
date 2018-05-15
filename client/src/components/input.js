@@ -24,7 +24,12 @@ class Input extends React.Component {
   render(){
     return (
       <form onSubmit={(e) => this.itemPost(e)} >
-        <input value={this.state.input} onChange={(e) => this.inputChange(e)}/>
+        <input
+          placeholder='split by "," if you want to write more'
+          value={this.state.input}
+          onChange={(e) => this.inputChange(e)}
+          style={{textAlign: 'left'}}
+        />
       </form>
     )
   }

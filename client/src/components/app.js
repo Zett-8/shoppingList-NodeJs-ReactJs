@@ -5,11 +5,11 @@ import ItemList from './itemList'
 
 export default () => {
   return (
-    <React.Fragment>
-      <h1 style={{fontSize: '18px'}}>Shopping List</h1>
+    <div style={{ margin: '0 auto', width: '500px', textAlign: 'center' }}>
+      <h1 style={{fontSize: '26px'}}>Shopping List</h1>
       <Input itemPost={(e) => this.itemPost(e)}/>
       <ItemList/>
-    </React.Fragment>
+    </div>
   )
 }
 

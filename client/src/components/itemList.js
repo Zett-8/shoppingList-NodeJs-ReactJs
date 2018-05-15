@@ -40,7 +40,7 @@ class ItemList extends React.Component{
   }
 
   render(){
-    return <ul>{this.state.items.map(v => <li key={Math.random()} onClick={() => this.itemDelete(v['_id'])}>{v['itemname']}</li>)}</ul>
+    return <ul style={{textAlign: 'left', marginLeft: '100px'}}>{this.state.items.map(v => <li key={Math.random()} onClick={() => this.itemDelete(v['_id'])}>{v['itemname']}</li>)}</ul>
   }
 }
 
