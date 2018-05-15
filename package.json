@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "9.3.0",
+    "npm": "6.0.1"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js process.env.NODE_ENV=dev",
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+
   },
   "author": "",
   "license": "ISC",
